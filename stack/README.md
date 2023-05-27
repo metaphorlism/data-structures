@@ -13,7 +13,7 @@ In this class it will have maximum data in the stack. If you dont want any limit
 ```python
 class Stack():
     # Constructor
-    def __init__(self, data, size: int):
+    def __init__(self, data=None, size=-1):
         self.stack = []
         self.max_stack = -1
 
@@ -83,7 +83,7 @@ def peek(self):
 
 ```python
 def main():
-    stack = Stack("https://www.google.com/", -1)
+    stack = Stack("https://www.google.com/")
     print("Search Wiki in Google")
     stack.push("https://www.google.com/search?q=wiki")
     print("Add 'https://www.google.com/search?q=wiki' into the stack")

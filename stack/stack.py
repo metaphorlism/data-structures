@@ -1,6 +1,6 @@
 class Stack():
     # Constructor
-    def __init__(self, data, size: int):
+    def __init__(self, data=None, size=-1):
         self.stack = []
         self.max_stack = -1
 
@@ -15,6 +15,10 @@ class Stack():
 
     def is_empty(self):
         return len(self.stack) == 0
+
+    def push(self, data):
+        if not self.is_full():
+            self.stack.append(data)
 
     def pop(self):
         if self.is_empty():
@@ -33,7 +37,7 @@ class Stack():
 
 
 def main():
-    stack = Stack("https://www.google.com/", -1)
+    stack = Stack("https://www.google.com/")
     print("Search Wiki in Google")
     stack.push("https://www.google.com/search?q=wiki")
     print("Add 'https://www.google.com/search?q=wiki' into the stack")
